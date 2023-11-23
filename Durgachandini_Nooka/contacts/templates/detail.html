@@ -8,6 +8,8 @@
     <h1>Contact Detail</h1>
     <p>Name: {{ contact.name }}</p>
     <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+    <p>Address: {{ contact.address }}</p>
     <a href="{% url 'edit_contact' contact.id %}">Edit</a> |
     <a href="{% url 'delete_contact' contact.id %}">Delete</a> |
     <a href="{% url 'list_contacts' %}">Back to List</a>
