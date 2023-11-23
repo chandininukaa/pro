@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +8,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'css/styles.css' %}"
+      href="{% static 'static/contacts/css/styles.css' %}"
     />
   </head>
   <body>
@@ -18,7 +19,7 @@
           <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'list_contacts' %}">Contacts</a></li>
-            <!-- Add more navigation items here -->
+           
           </ul>
         </nav>
       </div>
@@ -26,7 +27,7 @@
 
     <div class="container">
       {% block content %}
-      <!-- Content will go here -->
+     
       {% endblock %}
     </div>
 
@@ -37,5 +38,67 @@
     </footer>
 
     <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Django App{% endblock %}</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    "
+  >
+    <header
+      style="
+        background-color: #333;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+      "
+    >
+      <h1 style="margin: 0">My Django App</h1>
+    </header>
+
+    <nav style="background-color: #444; padding: 10px 0; text-align: center">
+      <ul style="list-style: none; padding: 0; margin: 0">
+        <li style="display: inline; margin-right: 20px">
+          <a href="{% url 'home' %}" style="text-decoration: none; color: white"
+            >Home</a
+          >
+        </li>
+        <li style="display: inline; margin-right: 20px">
+          <a
+            href="{% url 'list_contacts' %}"
+            style="text-decoration: none; color: white"
+            >Contacts</a
+          >
+        </li>
+        <!-- Add more navigation items here -->
+      </ul>
+    </nav>
+
+    <div class="container" style="width: 80%; margin: auto; overflow: hidden">
+      {% block content %}
+      <!-- Content will go here -->
+      {% endblock %}
+    </div>
+
+    <footer
+      style="
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333;
+        color: white;
+      "
+    >
+      <p>&copy; 2023 My Django App</p>
+    </footer>
   </body>
 </html>

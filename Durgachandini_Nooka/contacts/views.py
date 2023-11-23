@@ -4,7 +4,6 @@ from .forms import ContactForm
 
 def list_contacts(request):
     contacts = Contact.objects.all()
-    print(contacts)
     return render(request, 'list.html', {'contacts': contacts})
 
 def detail_contact(request, contact_id):
@@ -14,7 +13,6 @@ def detail_contact(request, contact_id):
 def create_contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
-        print(form.data)
         if form.is_valid():
             form.save()
             return redirect('list_contacts')
