@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Confirm Delete</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    "
+  >
+    <h1 style="color: #333">Confirm Delete</h1>
+    <p style="margin-bottom: 20px">
+      Are you sure you want to delete "{{ object_name }}"?
+    </p>
+    <form method="post" style="display: inline">
+      {% csrf_token %}
+      <button
+        type="submit"
+        style="
+          background-color: #f44336;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+      >
+        Confirm
+      </button>
+    </form>
+    <a
+      href="{% url 'list_contacts' %}"
+      style="
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-left: 10px;
+      "
+      >Cancel</a
+    >
+  </body>
+</html>
