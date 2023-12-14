@@ -11,3 +11,5 @@ class ContactForm(forms.ModelForm):
             'phone': forms.NumberInput(attrs={'class': 'form-control'}),
             'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
         }
+
+        
