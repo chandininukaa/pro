@@ -33,7 +33,18 @@
       <p style="margin-bottom: 20px">
         <strong>Address:</strong> {{ contact.address }}
       </p>
-      <a href="{% url 'edit_contact' contact.id %}">Edit</a>
+      <a
+        href="{% url 'edit_contact' contact.id %}"
+        style="
+          background-color: #ffc107;
+          color: white;
+          padding: 10px 15px;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-right: 10px;
+        "
+        >Edit</a
+      >
       <a
         href="{% url 'delete_contact' contact.id %}"
         style="
